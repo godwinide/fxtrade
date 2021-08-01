@@ -1,0 +1,102 @@
+<div class="deposit bg-dark">
+    <h1>Make A Withdrawer Request</h1>
+
+    <div class="with-shadow">
+        <h3 style="text-align: left;">Select your preferred withdrawal payment option :</h3>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header bg-secondary" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fab fa-bitcoin"></i>
+                    Bitcoin recommeded
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body bg-secondary">
+                  <hr>
+                  <%-include("./partials/messages") %>
+                  <form method="post" novalidate="novalidate">
+                      <div class="form-group has-success">
+                          <label for="cc-name" class="control-label mb-1 text-white">Withdrawer Amount</label>
+                          <input required id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                              autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                          <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="cc-number" class="control-label mb-1 text-white">Wallet Address</label>
+                          <input required id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                              data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                              autocomplete="cc-number">
+                          <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                      </div>
+                      <div>
+                          <button id="payment-button" type="submit" class="btn btn-lg btn-dark btn-block">
+                              <i class="fa fa-lock fa-lg"></i>&nbsp;
+                              <span id="payment-button-amount">Proceed</span>
+                              <span id="payment-button-sending" style="display:none;">Sending…</span>
+                          </button>
+                      </div>
+                  </form>
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header bg-secondary" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fas fa-university"></i>
+                    Transfer
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body bg-secondary">
+                  <hr>
+                  <%-include("./partials/messages") %>
+                  <form action="" method="post" novalidate="novalidate">
+                      <div class="form-group has-success">
+                          <label for="cc-name" class="control-label mb-1 text-white">Name</label>
+                          <input required id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                              autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                          <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="cc-number" class="control-label mb-1 text-white">Account Number</label>
+                          <input required id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                              data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                              autocomplete="cc-number">
+                          <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="cc-number" class="control-label mb-1 text-white">Bank</label>
+                          <input required id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                              data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                              autocomplete="cc-number">
+                          <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="cc-number" class="control-label mb-1 text-white">Amount</label>
+                          <input required id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                              data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                              autocomplete="cc-number">
+                          <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                      </div>
+                      <div>
+                          <button id="payment-button" type="submit" class="btn btn-lg btn-dark btn-block">
+                              <i class="fa fa-lock fa-lg"></i>&nbsp;
+                              <span id="payment-button-amount">Proceed</span>
+                              <span id="payment-button-sending" style="display:none;">Sending…</span>
+                          </button>
+                      </div>
+                  </form>
+              </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+</div>
